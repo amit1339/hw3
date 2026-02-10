@@ -22,8 +22,8 @@ def main():
             elif command == "welcome":
                 print("WELCOME!")
                 # Personal details as per PDF example
-                print("submitter 1: studentA studentA@gmail.com 123456789")
-                print("submitter 2: studentB studentB@gmail.com 987654321")
+                print("submitter 1: Amit Ben Yosef amit1339@gmail.com 314649187")
+                print("submitter 2: Idan Asulin asulinidan15@gmail.com 313571838")
 
             elif command == "add_unit":
                 if len(parts) < 2:
