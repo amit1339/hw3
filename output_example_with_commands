@@ -1,0 +1,188 @@
+Please enter a command:
+welcome
+WELCOME!
+submitter 1: studentA studentA@gmail.com 123456789
+submitter 2: studentB studentB@gmail.com 987654321
+Please enter a command:
+invalid_command
+The command invalid_command is unknown.
+Please enter a command:
+add_employee Moshe Management 50 HEAD_OF_ORGANIZATION
+Unit Management does not exists.
+Please enter a command:
+add_unit Management
+Unit Management added successfully
+Please enter a command:
+add_employee Moshe Management 50 INVALID_ROLE
+Wrong format for add employee command.
+	role must be a valid employee role
+Please enter a command:
+add_employee Moshe Management 50 HEAD_OF_ORGANIZATION
+Employee added successfully and was assigned id 0
+Please enter a command:
+add_employee Susan Management 45 HEAD_OF_ORGANIZATION
+Organization can have only a single HEAD_OF_ORGANIZATION
+Please enter a command:
+add_employee Susan Management 45 DIRECTOR 0
+Employee added successfully and was assigned id 1
+Please enter a command:
+add_unit Engineering
+Unit Engineering added successfully
+Please enter a command:
+add_employee Hen Engineering 32 MANAGER 1
+Employee added successfully and was assigned id 2
+Please enter a command:
+add_employee Natan Engineering 31 STAFF_MEMBER 2
+Employee added successfully and was assigned id 3
+Please enter a command:
+delete_employee 41
+Employee with this id was not found.
+Please enter a command:
+delete_employee 0
+HEAD_OF_ORGANIZATION can never be deleted!
+Please enter a command:
+delete_employee 1
+Employee has reporters - can't delete
+Please enter a command:
+delete_employee 3
+Employee with id 3 deleted successfully
+Please enter a command:
+add_employee STAFF_MEMBER_A Engineering 24 STAFF_MEMBER 2
+Employee added successfully and was assigned id 4
+Please enter a command:
+add_employee STAFF_MEMBER_B Engineering 25 STAFF_MEMBER 2
+Employee added successfully and was assigned id 5
+Please enter a command:
+add_employee INTERN_A Engineering 26 INTERN 4
+Employee with role STAFF_MEMBER can not manage.
+Please enter a command:
+add_employee INTERN_A Engineering 26 INTERN 2
+Employee added successfully and was assigned id 6
+Please enter a command:
+add_employee SENIOR_STAFF_A Engineering 30 SENIOR_STAFF 2
+Employee added successfully and was assigned id 7
+Please enter a command:
+assign_manager 120 4
+Employee with this id was not found.
+Please enter a command:
+assign_manager 4 120
+Manager with this id was not found.
+Please enter a command:
+assign_manager 4 6
+Employee with role INTERN can not manage.
+Please enter a command:
+assign_manager 4 7
+Assigned employee 4 to manager 7
+Please enter a command:
+assign_manager 5 7
+Assigned employee 5 to manager 7
+Please enter a command:
+assign_manager 6 7
+Assigned employee 6 to manager 7
+Please enter a command:
+add_unit Manufacturing
+Unit Manufacturing added successfully
+Please enter a command:
+add_employee DIRECTOR_B Management 32 DIRECTOR 0
+Employee added successfully and was assigned id 8
+Please enter a command:
+add_employee SENIOR_STAFF_B Manufacturing 32 SENIOR_STAFF 8
+Employee added successfully and was assigned id 9
+Please enter a command:
+add_employee STAFF_MEMBER_C Manufacturing 24 STAFF_MEMBER 8
+Employee added successfully and was assigned id 10
+Please enter a command:
+add_employee STAFF_MEMBER_D Manufacturing 25 STAFF_MEMBER 8
+Employee added successfully and was assigned id 11
+Please enter a command:
+add_employee INTERN_B Manufacturing 26 INTERN 9
+Employee added successfully and was assigned id 12
+Please enter a command:
+add_unit Finance
+Unit Finance added successfully
+Please enter a command:
+add_employee Ben Management 37 DIRECTOR 0
+Employee added successfully and was assigned id 13
+Please enter a command:
+add_employee STAFF_MEMBER_E Finance 24 STAFF_MEMBER 13
+Employee added successfully and was assigned id 14
+Please enter a command:
+add_employee INTERN_C Finance 25 INTERN 13
+Employee added successfully and was assigned id 15
+Please enter a command:
+add_unit HR
+Unit HR added successfully
+Please enter a command:
+add_employee Nate HR 24 MANAGER 13
+Employee added successfully and was assigned id 16
+Please enter a command:
+add_employee STAFF_MEMBER_X HR 25 STAFF_MEMBER 16
+Employee added successfully and was assigned id 17
+Please enter a command:
+add_employee STAFF_MEMBER_Y HR 25 STAFF_MEMBER 16
+Employee added successfully and was assigned id 18
+Please enter a command:
+assign_manager 17 2
+Assigned employee 17 to manager 2
+Please enter a command:
+move_to_unit 17 invalid_unit
+Unit invalid_unit does not exist.
+Please enter a command:
+move_to_unit 120 Engineering
+Employee with this id was not found.
+Please enter a command:
+move_to_unit 17 Engineering
+Employee 17 moved to unit Engineering.
+Please enter a command:
+assign_manager 5 16
+Assigned employee 5 to manager 16
+Please enter a command:
+move_to_unit 5 HR
+Employee 5 moved to unit HR.
+Please enter a command:
+print_org
+|--HEAD_OF_ORGANIZATION | Management | 0 | Moshe - 50
+	|--DIRECTOR | Management | 1 | Susan - 45
+		|--MANAGER | Engineering | 2 | Hen - 32
+			|--SENIOR_STAFF | Engineering | 7 | SENIOR_STAFF_A - 30
+				|--STAFF_MEMBER | Engineering | 4 | STAFF_MEMBER_A - 24
+				|--INTERN | Engineering | 6 | INTERN_A - 26
+			|--STAFF_MEMBER | Engineering | 17 | STAFF_MEMBER_X - 25
+	|--DIRECTOR | Management | 8 | DIRECTOR_B - 32
+		|--SENIOR_STAFF | Manufacturing | 9 | SENIOR_STAFF_B - 32
+			|--INTERN | Manufacturing | 12 | INTERN_B - 26
+		|--STAFF_MEMBER | Manufacturing | 10 | STAFF_MEMBER_C - 24
+		|--STAFF_MEMBER | Manufacturing | 11 | STAFF_MEMBER_D - 25
+	|--DIRECTOR | Management | 13 | Ben - 37
+		|--STAFF_MEMBER | Finance | 14 | STAFF_MEMBER_E - 24
+		|--INTERN | Finance | 15 | INTERN_C - 25
+		|--MANAGER | HR | 16 | Nate - 24
+			|--STAFF_MEMBER | HR | 5 | STAFF_MEMBER_B - 25
+			|--STAFF_MEMBER | HR | 18 | STAFF_MEMBER_Y - 25
+Please enter a command:
+print_units
+Management | number of employees = 4
+	|--HEAD_OF_ORGANIZATION | Management | 0 | Moshe - 50
+	|--DIRECTOR | Management | 1 | Susan - 45
+	|--DIRECTOR | Management | 8 | DIRECTOR_B - 32
+	|--DIRECTOR | Management | 13 | Ben - 37
+Engineering | number of employees = 5
+	|--MANAGER | Engineering | 2 | Hen - 32
+	|--STAFF_MEMBER | Engineering | 4 | STAFF_MEMBER_A - 24
+	|--INTERN | Engineering | 6 | INTERN_A - 26
+	|--SENIOR_STAFF | Engineering | 7 | SENIOR_STAFF_A - 30
+	|--STAFF_MEMBER | Engineering | 17 | STAFF_MEMBER_X - 25
+Manufacturing | number of employees = 4
+	|--SENIOR_STAFF | Manufacturing | 9 | SENIOR_STAFF_B - 32
+	|--STAFF_MEMBER | Manufacturing | 10 | STAFF_MEMBER_C - 24
+	|--STAFF_MEMBER | Manufacturing | 11 | STAFF_MEMBER_D - 25
+	|--INTERN | Manufacturing | 12 | INTERN_B - 26
+Finance | number of employees = 2
+	|--STAFF_MEMBER | Finance | 14 | STAFF_MEMBER_E - 24
+	|--INTERN | Finance | 15 | INTERN_C - 25
+HR | number of employees = 3
+	|--STAFF_MEMBER | HR | 5 | STAFF_MEMBER_B - 25
+	|--MANAGER | HR | 16 | Nate - 24
+	|--STAFF_MEMBER | HR | 18 | STAFF_MEMBER_Y - 25
+Please enter a command:
+quit

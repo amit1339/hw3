@@ -1,0 +1,49 @@
+welcome
+invalid_command
+add_employee Moshe Management 50 HEAD_OF_ORGANIZATION
+add_unit Management
+add_employee Moshe Management 50 INVALID_ROLE
+add_employee Moshe Management 50 HEAD_OF_ORGANIZATION
+add_employee Susan Management 45 HEAD_OF_ORGANIZATION
+add_employee Susan Management 45 DIRECTOR 0
+add_unit Engineering
+add_employee Hen Engineering 32 MANAGER 1
+add_employee Natan Engineering 31 STAFF_MEMBER 2
+delete_employee 41
+delete_employee 0
+delete_employee 1
+delete_employee 3
+add_employee STAFF_MEMBER_A Engineering 24 STAFF_MEMBER 2
+add_employee STAFF_MEMBER_B Engineering 25 STAFF_MEMBER 2
+add_employee INTERN_A Engineering 26 INTERN 4
+add_employee INTERN_A Engineering 26 INTERN 2
+add_employee SENIOR_STAFF_A Engineering 30 SENIOR_STAFF 2
+assign_manager 120 4
+assign_manager 4 120
+assign_manager 4 6
+assign_manager 4 7
+assign_manager 5 7
+assign_manager 6 7
+add_unit Manufacturing
+add_employee DIRECTOR_B Management 32 DIRECTOR 0
+add_employee SENIOR_STAFF_B Manufacturing 32 SENIOR_STAFF 8
+add_employee STAFF_MEMBER_C Manufacturing 24 STAFF_MEMBER 8
+add_employee STAFF_MEMBER_D Manufacturing 25 STAFF_MEMBER 8
+add_employee INTERN_B Manufacturing 26 INTERN 9
+add_unit Finance
+add_employee Ben Management 37 DIRECTOR 0
+add_employee STAFF_MEMBER_E Finance 24 STAFF_MEMBER 13
+add_employee INTERN_C Finance 25 INTERN 13
+add_unit HR
+add_employee Nate HR 24 MANAGER 13
+add_employee STAFF_MEMBER_X HR 25 STAFF_MEMBER 16
+add_employee STAFF_MEMBER_Y HR 25 STAFF_MEMBER 16
+assign_manager 17 2
+move_to_unit 17 invalid_unit
+move_to_unit 120 Engineering
+move_to_unit 17 Engineering
+assign_manager 5 16
+move_to_unit 5 HR
+print_org
+print_units
+quit
