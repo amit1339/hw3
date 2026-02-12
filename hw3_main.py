@@ -1,5 +1,3 @@
-import sys
-# Ensure organization.py is in the same directory
 from organization import Organization
 
 def main():
@@ -21,7 +19,6 @@ def main():
 
             elif command == "welcome":
                 print("WELCOME!")
-                # Personal details as per PDF example
                 print("submitter 1: Amit Ben Yosef amit1339@gmail.com 314649187")
                 print("submitter 2: Idan Asulin asulinidan15@gmail.com 313571838")
 
@@ -32,17 +29,12 @@ def main():
                 org.add_unit(parts[1])
 
             elif command == "add_employee":
-                # Expected: add_employee <name> <unit> <age> <role> [manager_id]
                 if len(parts) < 5:
-                    # Special check for validation error message parity if needed
-                    # But prompt implies we assume correct number of parameters usually,
-                    # EXCEPT where error messages are defined.
                     print("Wrong format for add employee command.")
                     continue
-                
+
                 name = parts[1]
                 unit = parts[2]
-                # Prompt says "assume safe casting... if something should be int - it will be int" [cite: 51]
                 age = int(parts[3])
                 role = parts[4]
                 
@@ -90,7 +82,6 @@ def main():
         except EOFError:
             break
         except Exception as e:
-            # Fallback for unexpected errors
             print(f"Error: {e}")
 
 if __name__ == "__main__":
